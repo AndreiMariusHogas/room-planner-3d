@@ -17,7 +17,7 @@ export class Material extends PureComponent {
   }
 
   render () {
-    const { material, pointId, classes } = this.props
+    const { material, classes } = this.props
     return (
       <>
         <Tooltip title={<span className={classes.tooltip}>{material.name}</span>} placement='right'>
@@ -30,8 +30,12 @@ export class Material extends PureComponent {
   }
 }
 
-const mapStateToProps = state => ({
-  state
-})
+const mapStateToProps = state => ({})
+
+Material.propTypes = {
+  material: PropTypes.object.isRequired,
+  pointId: PropTypes.string.isRequired,
+  classes: PropTypes.object.isRequired
+}
 
 export default connect(mapStateToProps, { applyMaterial })(withStyles(globalStyles)(Material))

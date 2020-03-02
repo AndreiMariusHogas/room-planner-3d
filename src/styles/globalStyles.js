@@ -60,6 +60,10 @@ export default {
       width: '6rem',
       height: '6rem',
       float: 'left'
+    },
+    loadingText: {
+      top: '35%',
+      left: '45%'
     }
   },
   '@media (max-width:720px)': {
@@ -75,7 +79,8 @@ export default {
     },
     loadingText: {
       top: '57%',
-      left: '26%'
+      left: '33%',
+      fontSize: '2rem'
     }
   }
 }

@@ -1,23 +1,26 @@
 // React
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+// Material UI
+import Grid from '@material-ui/core/Grid'
 // Components
 import Material from '../common/Material.component'
-
 
 export class MaterialsMenu extends PureComponent {
   render () {
     const { materials, pointId } = this.props
     return (
-      <>
-        {materials.map(material => <Material key={material.id} pointId={pointId} material={material} />)}
-      </>
+      <Grid container align='left'>
+        <Grid item xs={4} md={1}>
+          {materials.map(material => <Material key={material.id} pointId={pointId} material={material} />)}
+        </Grid>
+      </Grid>
     )
   }
 }
 
 MaterialsMenu.propTypes = {
-  material: PropTypes.array.isRequired,
+  materials: PropTypes.array.isRequired,
   pointId: PropTypes.string.isRequired
 }
 
