@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Typography from '@material-ui/core/Typography'
-import globalStyles from '../../styles/globalStyles'
+import styles from '../../styles/styles'
 
 export const LoadingScreen = (props) => {
   const { classes } = props
@@ -21,4 +21,4 @@ LoadingScreen.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(globalStyles)(LoadingScreen)
+export default withStyles(styles)(LoadingScreen)

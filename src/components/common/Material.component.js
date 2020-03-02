@@ -7,7 +7,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Tooltip from '@material-ui/core/Tooltip'
 import Button from '@material-ui/core/Button'
 // Styles
-import globalStyles from '../../styles/globalStyles'
+import styles from '../../styles/styles'
 import { connect } from 'react-redux'
 import { applyMaterial } from '../../redux/actions'
 
@@ -38,4 +38,4 @@ Material.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps, { applyMaterial })(withStyles(globalStyles)(Material))
+export default connect(mapStateToProps, { applyMaterial })(withStyles(styles)(Material))

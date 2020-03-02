@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 // Material UI
 import withStyles from '@material-ui/core/styles/withStyles'
 // Styles
-import globalStyles from '../../styles/globalStyles'
+import styles from '../../styles/styles'
 
 export const Layer = (props) => {
   const { material, index, classes } = props
@@ -17,5 +17,4 @@ Layer.propTypes = {
   classes: PropTypes.object.isRequired
 }
 
-export default withStyles(globalStyles)(Layer)
-
+export default withStyles(styles)(Layer)

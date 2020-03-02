@@ -1,20 +1,24 @@
 // React
-import React from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 // Material UI
 import withStyles from '@material-ui/core/styles/withStyles'
+import Button from '@material-ui/core/Button'
 // Icons
 import Camera from '@material-ui/icons/Camera'
 // Styles
-import globalStyles from '../../styles/globalStyles'
+import pointStyles from '../../styles/point'
 
 export const Point = (props) => {
   const { point: { id, coordX, coordY }, classes, handleClick } = props
+
+  const handler = useCallback(() => handleClick(id), [id, handleClick])
+
   return (
     <>
-      <button className={classes.point} onClick={(e) => handleClick(e.currentTarget.value)} style={{ top: `${coordY}%`, left: `${coordX}%` }} value={id}>
+      <Button className={classes.point} onClick={handler} style={{ top: `${coordY}%`, left: `${coordX}%` }}>
         <Camera className={classes.pointIcon} />
-      </button>
+      </Button>
     </>
   )
 }
@@ -25,4 +29,4 @@ Point.propTypes = {
   handleClick: PropTypes.func.isRequired
 }
 
-export default withStyles(globalStyles)(Point)
+export default withStyles(pointStyles)(Point)

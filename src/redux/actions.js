@@ -2,6 +2,7 @@ import {
   LOAD_POINTS,
   LOAD_MATERIALS,
   APPLY_MATERIAL,
+  CLOSE_MATERIALS_MENU,
   ERROR,
   RESET
 } from './types'
@@ -53,6 +54,10 @@ export const applyMaterial = (pointId, material) => dispatch => {
       material
     }
   })
+}
+
+export const closeMaterialsMenu = () => dispatch => {
+  dispatch({ type: CLOSE_MATERIALS_MENU })
 }
 
 export const reset = () => dispatch => {

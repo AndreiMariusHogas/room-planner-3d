@@ -1,4 +1,4 @@
-import { LOAD_POINTS, LOAD_MATERIALS, APPLY_MATERIAL, ERROR, RESET } from './types'
+import { LOAD_POINTS, LOAD_MATERIALS, APPLY_MATERIAL, CLOSE_MATERIALS_MENU, ERROR, RESET } from './types'
 
 export default function (state, action) {
   switch (action.type) {
@@ -31,6 +31,11 @@ export default function (state, action) {
       return {
         ...state,
         applied: [...state.applied]
+      }
+    case CLOSE_MATERIALS_MENU:
+      return {
+        ...state,
+        showmingMenu: false
       }
     case RESET:
       return {
