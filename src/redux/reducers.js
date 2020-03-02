@@ -35,7 +35,7 @@ export default function (state, action) {
     case CLOSE_MATERIALS_MENU:
       return {
         ...state,
-        showmingMenu: false
+        showingMenu: false
       }
     case RESET:
       return {
