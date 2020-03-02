@@ -28,6 +28,7 @@ const mapStateToProps = state => ({
 })
 
 PointsContainer.propTypes = {
+  loadPoints: PropTypes.func.isRequired,
   loadingPoints: PropTypes.bool.isRequired,
   points: PropTypes.array
 }

@@ -27,12 +27,7 @@ export default {
     margin: '1rem 2rem',
     float: 'left'
   },
-  materialName: {
-    position: 'sticky',
-    fontSize: '1.2rem',
-    top: 0
-  },
-  materialImage: {
+  materialPreview: {
     width: '8rem',
     height: '8rem'
   },
@@ -61,13 +56,14 @@ export default {
     left: '50%'
   },
   '@media (max-width:1280px)': {
-    optionsImage: {
+    materialPreview: {
       width: '6rem',
-      height: '6rem'
+      height: '6rem',
+      float: 'left'
     }
   },
   '@media (max-width:720px)': {
-    optionsImage: {
+    materialPreview: {
       width: '4rem',
       height: '4rem',
       float: 'left'

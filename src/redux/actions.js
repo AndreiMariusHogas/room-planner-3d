@@ -45,7 +45,7 @@ export const loadMaterials = (pointId) => dispatch => {
     }))
 }
 
-export const applyMaterials = (pointId, material) => dispatch => {
+export const applyMaterial = (pointId, material) => dispatch => {
   dispatch({
     type: APPLY_MATERIAL,
     payload: {

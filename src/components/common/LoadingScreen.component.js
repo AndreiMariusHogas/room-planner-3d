@@ -1,5 +1,6 @@
 // React
 import React from 'react'
+import PropTypes from 'prop-types'
 // Materail UI
 import withStyles from '@material-ui/core/styles/withStyles'
 import LinearProgress from '@material-ui/core/LinearProgress'
@@ -14,6 +15,10 @@ export const LoadingScreen = (props) => {
       <LinearProgress className={classes.loading} color='primary' />
     </>
   )
+}
+
+LoadingScreen.propTypes = {
+  classes: PropTypes.object.isRequired
 }
 
 export default withStyles(globalStyles)(LoadingScreen)

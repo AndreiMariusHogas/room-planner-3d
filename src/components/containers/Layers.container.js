@@ -11,7 +11,7 @@ export class LayersContainer extends PureComponent {
     const { applied } = this.props
     return (
       <>
-        {applied.map(appliedLayer => (<Layer key={appliedLayer.id} index={applied.indexOf(appliedLayer) - 2} layer={appliedLayer} />))}
+        {applied.map(appliedMaterial => (<Layer key={appliedMaterial.pointid} index={applied.indexOf(appliedMaterial) - 2} material={appliedMaterial} />))}
       </>
     )
   }
@@ -25,4 +25,4 @@ LayersContainer.propTypes = {
   applied: PropTypes.array.isRequired
 }
 
-export default connect(mapStateToProps, {})(LayersContainer)
+export default connect(mapStateToProps)(LayersContainer)

@@ -14,19 +14,23 @@ export default function (state, action) {
       return {
         ...state,
         points: state.points,
+        pointId: action.payload.pointId,
+        materials: action.payload.materials,
         showingMenu: true
       }
     case APPLY_MATERIAL:
       const appliedIndex = state.applied.findIndex(layer => layer.pointId === action.payload.pointId)
-      if (index > 0) {
+      if (appliedIndex > 0) {
         state.applied[appliedIndex] = {
           pointId: action.payload.pointId,
           material: action.payload.material
         }
+      } else {
+        state.applied.push(action.payload)
       }
       return {
         ...state,
-        applied: state.applied
+        applied: [...state.applied]
       }
     case RESET:
       return {

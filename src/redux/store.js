@@ -5,8 +5,10 @@ const baseImage = 'https://firebasestorage.googleapis.com/v0/b/porcelanosa-partn
 
 const initialState = {
   loadingPoints: true,
-  applied: [{ id: '1', layer: baseImage }],
+  applied: [{ pointId: 'baseimage', material: { layer: baseImage } }],
   points: [],
+  pointId: '',
+  materials: [],
   error: {},
   showingMenu: false
 }
