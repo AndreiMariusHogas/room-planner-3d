@@ -1,36 +1,25 @@
 import { LOAD_POINTS, LOAD_MATERIALS, APPLY_MATERIAL, ERROR, RESET } from './types'
-import baseImage from '../assets/images'
 
-const initialState = {
-  loadingPoints: true,
-  applied:[baseImage],
-  points: [{ pointId, coordX, coordY, materials:[]}],
-  error: {},
-  showingMenu: false
-}
-
-export default function (state=initialState, action) {
+export default function (state, action) {
   switch (action.type) {
     case LOAD_POINTS:
       return {
         ...state,
         points: action.payload,
-        loading: false
-        }
-    case LOAD_MATERIALS: {
-      let index = state.points.findIndex( point => point.id === action.payload.pointId)
-      points[index].materials = action.payload.materials
+        loadingPoints: false
+      }
+    case LOAD_MATERIALS:
+      const index = state.points.findIndex(point => point.id === action.payload.pointId)
+      state.points[index].materials = action.payload.materials
       return {
         ...state,
         points: state.points,
         showingMenu: true
       }
-    }
-    case APPLY_MATERIAL: {
-      const appliedMaterial = action.payload.material
-      let index = state.applied.findIndex( layer => layer.pointId === action.payload.pointId)
-      if(index >0){
-        applied[index] = {
+    case APPLY_MATERIAL:
+      const appliedIndex = state.applied.findIndex(layer => layer.pointId === action.payload.pointId)
+      if (index > 0) {
+        state.applied[appliedIndex] = {
           pointId: action.payload.pointId,
           material: action.payload.material
         }
@@ -39,24 +28,21 @@ export default function (state=initialState, action) {
         ...state,
         applied: state.applied
       }
-    }
-    case RESET: {
+    case RESET:
       return {
         ...state,
-        applied: [baseImage],
+        applied: [state.applied[0]],
         points: [],
         error: {},
         showingMenu: false
       }
-    }
-    case ERROR: {
+    case ERROR:
       return {
         ...state,
         error: action.payload
       }
     default: {
       return state
-    }
     }
   }
 }

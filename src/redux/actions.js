@@ -4,7 +4,7 @@ import {
   APPLY_MATERIAL,
   ERROR,
   RESET
-} from '../types'
+} from './types'
 
 import axios from 'axios'
 
@@ -55,6 +55,6 @@ export const applyMaterials = (pointId, material) => dispatch => {
   })
 }
 
-export const reset = () => dispatch =>{
+export const reset = () => dispatch => {
   dispatch({ type: RESET })
 }

@@ -1,8 +1,15 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './reducers'
+import baseImage from '../assets/images/baseimage.png'
 
-const initialState = {}
+const initialState = {
+  loadingPoints: true,
+  applied: [baseImage],
+  points: [],
+  error: {},
+  showingMenu: false
+}
 const middleware = [thunk]
 const store = createStore(
   reducer,
