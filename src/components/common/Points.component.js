@@ -1,19 +1,26 @@
 // React
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+// Material UI
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 // Components
 import Point from './Point.component'
 import MaterialsMenu from '../common/MaterialsMenu.component'
 // Redux
 import { connect } from 'react-redux'
-import { loadMaterials } from '../../redux/actions'
+import { loadMaterials, closeMaterialsMenu } from '../../redux/actions'
 
 export class Points extends PureComponent {
   render () {
-    const { points, pointId, materials, showingMenu, loadMaterials } = this.props
+    const { points, pointId, materials, showingMenu, loadMaterials, closeMaterialsMenu } = this.props
     return (
       <>
-        {points.map(point => <Point key={point.id} point={point} handleClick={loadMaterials} />)}
+        {points.map(point =>
+          <ClickAwayListener key={point.id} onClickAway={closeMaterialsMenu}>
+            <Point key={point.id} point={point} handleClick={loadMaterials} />
+          </ClickAwayListener>
+        )}
+
         {showingMenu && (<MaterialsMenu materials={materials} pointId={pointId} />)}
       </>
     )
@@ -34,4 +41,4 @@ Points.propTypes = {
   loadMaterials: PropTypes.func.isRequired
 }
 
-export default connect(mapStateToProps, { loadMaterials })(Points)
+export default connect(mapStateToProps, { loadMaterials, closeMaterialsMenu })(Points)
