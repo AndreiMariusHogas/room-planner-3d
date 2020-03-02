@@ -3,7 +3,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 // Material UI
 import withStyles from '@material-ui/core/styles/withStyles'
-import Avatar from '@material-ui/core/Avatar'
 import Tooltip from '@material-ui/core/Tooltip'
 import Button from '@material-ui/core/Button'
 // Styles
@@ -22,7 +21,7 @@ export class Material extends PureComponent {
       <>
         <Tooltip title={<span className={classes.tooltip}>{material.name}</span>} placement='right'>
           <Button className={classes.materialContainer} onClick={this.handleClick}>
-            <Avatar alt={material.name} src={material.preview} variant='square' className={classes.materialPreview} />
+            <img src={material.preview} alt={material.name} className={classes.materialPreview} />
           </Button>
         </Tooltip>
       </>

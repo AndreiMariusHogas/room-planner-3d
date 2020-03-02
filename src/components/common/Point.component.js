@@ -22,7 +22,7 @@ export const Point = (props) => {
 
   return (
     <div className={classes.point} style={{ top: `${coordY}%`, left: `${coordX}%` }}>
-      <RoundButton variant='outlined' onClick ={handler}>
+      <RoundButton variant='outlined' onClick={handler}>
         <Camera />
       </RoundButton>
     </div>

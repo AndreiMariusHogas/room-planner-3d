@@ -16,12 +16,14 @@ export class Points extends PureComponent {
     return (
       <>
         {points.map(point =>
-          <ClickAwayListener key={point.id} onClickAway={closeMaterialsMenu}>
-            <Point key={point.id} point={point} handleClick={loadMaterials} />
-          </ClickAwayListener>
+          <Point key={point.id} point={point} handleClick={loadMaterials} />
         )}
 
-        {showingMenu && (<MaterialsMenu materials={materials} pointId={pointId} />)}
+        {showingMenu && (
+          <ClickAwayListener onClickAway={closeMaterialsMenu}>
+            <MaterialsMenu materials={materials} pointId={pointId} />
+          </ClickAwayListener>
+        )}
       </>
     )
   }
