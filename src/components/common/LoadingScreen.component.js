@@ -10,10 +10,10 @@ import styles from '../../styles/styles'
 export const LoadingScreen = (props) => {
   const { classes } = props
   return (
-    <>
+    <div>
       <Typography variant='h4' className={classes.loadingText}>Loading...</Typography>
       <LinearProgress className={classes.loading} color='primary' />
-    </>
+    </div>
   )
 }
 
