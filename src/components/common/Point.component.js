@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 
 export class Point extends PureComponent {
-  render() {
+  render () {
     const { id, coordX, coordY } = this.props.point
     return (
       <div>

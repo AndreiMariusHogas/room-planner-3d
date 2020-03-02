@@ -5,6 +5,7 @@ import './App.css'
 import withStyles from '@material-ui/core/styles/withStyles'
 // Components
 import PointsContainer from './components/containers/Points.container'
+import LayersContainer from './components/containers/Layers.container'
 // Style
 import globalStyles from './styles/globalStyles'
 // Redux
@@ -15,6 +16,7 @@ class App extends Component {
   render () {
     return (
       <Provider store={store}>
+        <LayersContainer />
         <PointsContainer />
       </Provider>
     )
