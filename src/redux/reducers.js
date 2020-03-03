@@ -1,5 +1,7 @@
 import { LOAD_POINTS, LOAD_MATERIALS, APPLY_MATERIAL, CLOSE_MATERIALS_MENU, ERROR, RESET } from './types'
 
+const baseImage = 'https://firebasestorage.googleapis.com/v0/b/porcelanosa-partners-spaces.appspot.com/o/projects%2FdorptVQTHsbkYC60NSlt%2Fscenes%2F1567170849457-base?alt=media&token=cf8bcee2-bf89-4fd9-8bfd-9d4462348844'
+
 export default function (state, action) {
   switch (action.type) {
     case LOAD_POINTS:
@@ -40,8 +42,11 @@ export default function (state, action) {
     case RESET:
       return {
         ...state,
-        applied: [state.applied[0]],
+        loadingPoints: true,
+        applied: [{ pointId: 'baseimage', material: { layer: baseImage } }],
         points: [],
+        pointId: '',
+        materials: [],
         error: {},
         showingMenu: false
       }

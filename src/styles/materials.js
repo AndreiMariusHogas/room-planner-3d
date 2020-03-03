@@ -1,28 +1,29 @@
 export default {
   container: {
-    marginBottom: '12px'
+    marginBottom: '12px',
+    diplay: 'flex',
+    flexDirection: 'row'
   },
   button: {
+    display: 'flex',
     backgroundColor: '#e7e5e4dd',
     outline: 'none',
     height: '62px',
     width: '300px',
     borderRadius: '9px 9px 9px 9px',
-    boxShadow: '0px 14px 32px 0px rgba(0, 0, 0, 0.15)',
     '&:hover': {
       boxShadow: '0px 10px 10px rgba(0,0,0,0.2)',
-      transform: 'translateY(-3px)',
       cursor: 'pointer'
     },
     '&:active': {
-      boxShadow: '0px 5px 10px rgba(0,0,0,0.2)',
-      transform: 'translateY(-1px)'
+      boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
     }
   },
   preview: {
     height: '50px',
     width: '50px',
-    float: 'left',
+    display: 'flex',
+    alignSelf: 'flex-start',
     marginLeft: '4px',
     borderRadius: '9px 9px 9px 9px',
     boxShadow: '0px 14px 32px 0px rgba(0, 0, 0, 0.15)'
@@ -30,20 +31,20 @@ export default {
   name: {
     fontFamily: 'Lato',
     fontSize: '1rem',
-    float: 'right',
-    marginRight: '6px',
-    paddingTop: '4px',
+    paddingTop: '2px',
     color: '#131313',
+    marginLeft: '1rem',
     letterSpacing: '.15em',
-    textShadow: '3px 1px 7px rgba(150, 150, 150, 1)'
+    textTransform: 'uppercase',
+    fontWeight: 'bold'
   },
   '@media (max-width:720px)': {
     name: {
-      fontSize: '0.8rem',
-      paddingTop: '6px'
+      fontSize: '0.7rem',
+      paddingTop: '8px'
     },
     button: {
-      width: '220px'
+      width: '240px'
     }
   }
 }

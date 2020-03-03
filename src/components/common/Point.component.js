@@ -11,7 +11,9 @@ import Camera from '@material-ui/icons/Camera'
 const RoundButton = withStyles({
   root: {
     borderRadius: '50%',
-    padding: '20px'
+    padding: '20px',
+    height: '80px',
+    width: '80px'
   }
 })(Button)
 
