@@ -9,7 +9,7 @@ import {
 
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://europe-west1-configurator-3d-dc530.cloudfunctions.net/api'
+axios.defaults.baseURL = 'https://europe-west1-room-planner3d.cloudfunctions.net/api'
 
 export const loadPoints = () => dispatch => {
   axios
