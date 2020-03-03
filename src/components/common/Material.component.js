@@ -13,7 +13,6 @@ import { applyMaterial } from '../../redux/actions'
 export class Material extends PureComponent {
   handleClick = (e) => {
     this.props.applyMaterial(this.props.pointId,this.props.material)
-    console.log(this.props)
   }
 
   render () {
