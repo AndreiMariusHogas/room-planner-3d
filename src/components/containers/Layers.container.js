@@ -11,7 +11,7 @@ export class LayersContainer extends PureComponent {
     const { applied } = this.props
     return (
       <>
-        {applied.map((material, index) => (<Layer key={material.pointId} index={index - 2} material={material} />))}
+        {applied.map((material, index) => (<Layer key={material.pointId} index={index - 3} material={material} />))}
       </>
     )
   }

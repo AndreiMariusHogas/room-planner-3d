@@ -1,17 +1,4 @@
 export default {
-  materialContainer: {
-    backgroundColor: 'rgba(0,0,0,0.2)',
-    margin: '1rem 2rem',
-    float: 'left'
-  },
-  materialPreview: {
-    width: '8rem',
-    height: '8rem'
-  },
-  tooltip: {
-    fontSize: '1.3rem',
-    padding: '8px'
-  },
   layer: {
     position: 'absolute',
     top: 0,
@@ -33,22 +20,12 @@ export default {
     left: '50%'
   },
   '@media (max-width:1280px)': {
-    materialPreview: {
-      width: '6rem',
-      height: '6rem',
-      float: 'left'
-    },
     loadingText: {
       top: '35%',
       left: '45%'
     }
   },
   '@media (max-width:720px)': {
-    materialPreview: {
-      width: '4rem',
-      height: '4rem',
-      float: 'left'
-    },
     loading: {
       width: '50%',
       top: '65%',

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import withStyles from '@material-ui/core/styles/withStyles'
 import LinearProgress from '@material-ui/core/LinearProgress'
 import Typography from '@material-ui/core/Typography'
+// Styles
 import styles from '../../styles/styles'
 
 export const LoadingScreen = (props) => {
