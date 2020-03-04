@@ -10,6 +10,7 @@ export default {
     outline: 'none',
     height: '62px',
     width: '300px',
+    transition: 'all 0.2s ease-out',
     borderRadius: '9px 9px 9px 9px',
     '&:hover': {
       boxShadow: '0px 10px 10px rgba(0,0,0,0.2)',
@@ -38,7 +39,7 @@ export default {
     textTransform: 'uppercase',
     fontWeight: 'bold'
   },
-  '@media (max-width:720px)': {
+  '@media (max-width:812px)': {
     name: {
       fontSize: '0.7rem',
       paddingTop: '8px'
