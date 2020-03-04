@@ -3,8 +3,7 @@ import {
   LOAD_MATERIALS,
   APPLY_MATERIAL,
   CLOSE_MATERIALS_MENU,
-  ERROR,
-  RESET
+  ERROR
 } from './types'
 
 import axios from 'axios'
@@ -58,8 +57,4 @@ export const applyMaterial = (pointId, material) => dispatch => {
 
 export const closeMaterialsMenu = () => dispatch => {
   dispatch({ type: CLOSE_MATERIALS_MENU })
-}
-
-export const reset = () => dispatch => {
-  dispatch({ type: RESET })
 }
